@@ -33,6 +33,8 @@
             var criaMosquito = setInterval(function() {
                 posicaoRandomica()
             }, criaMosquitoTempo)
+
+            document.querySelectorAll('img').forEach(el => el.setAttribute('draggable', false))
             
         </script>
     </body>
