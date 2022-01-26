@@ -8,6 +8,8 @@ var criaMosquitoTempo = 1500
 var nivel = window.location.search
 nivel = nivel.replace('?', '')
 
+document.querySelectorAll('img').forEach(el => el.setAttribute('draggable', false))
+
 if (nivel === 'normal') {
     // 1500
     criaMosquitoTempo = 1500
@@ -73,6 +75,7 @@ function posicaoRandomica() {
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
     mosquito.id = 'mosquito'
+    mosquito.draggable = 'false'
     mosquito.onclick = function() {
         this.remove()
     }
